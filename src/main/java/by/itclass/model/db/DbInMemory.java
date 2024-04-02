@@ -18,4 +18,17 @@ public class DbInMemory {
         return users.stream()
                 .anyMatch(user -> user.getFio().equals(fio));
     }
+
+    public static User findUserByFio(String fio) {
+        return users.stream()
+                .filter(it -> it.getFio().equals(fio))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public static List<User> findUsersByIds(int fromId, int toId) {
+        return users.stream()
+                .filter(it -> it.getId() >= fromId && it.getId() <= toId)
+                .toList();
+    }
 }

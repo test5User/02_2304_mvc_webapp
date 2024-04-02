@@ -9,5 +9,21 @@
         FIO: <input name="fio"> <br>
         <input type="submit" value="Find">
     </form>
+
+    <form action="/jspSearch" method="get">
+        FIO: <input name="fio"> <br>
+        <input type="submit" value="Find">
+    </form>
+
+    <form action="/criteria" method="get">
+        Search by:<br>
+        FIO: <input type="radio" name="criteria" value="fio" checked>
+        ID: <input type="radio" name="criteria" value="id"> <br>
+        Name: <input name="fio"> <br>
+        From Id: <input name="fromId"> <br>
+        To Id: <input name="toId"> <br>
+        <input type="submit" value="Find">
+    </form>
+
 </body>
 </html>
